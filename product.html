@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary py-4 fixed-top">
+        <div class="container">
+            <a class="navbar-brand order-lg-0 align-items-center d-flex" href="index.html">
+                <img src="images/shopping-bag-icon.png" alt="">
+                <span class="text-uppercase fw-lighter ms-2 ">Attire</span>
+            </a>
+            <div class="nav-btns order-lg-2">
+                <button type="button" class="position-relative btn">
+                    <i class="fa fa-shopping-cart"></i>
+                    <span class="position-absolute top-0 start-100 bg-danger translate-middle badge">4</span>
+                </button>
+                <button type="button" class="btn position-relative">
+                    <i class="fa fa-heart"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge bg-danger">2</span>
+                </button>
+                <a href="log.html"><button type="button" class="btn position-relative">
+                    <ion-icon name="log-in-outline" style="font-size: 30px;"></ion-icon>
+                </button></a>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+        </div>
+    </nav>
+    <section class="mtpro pb-5" onload="getPics()">
+        <div class="container " style="border-radius: 2px solid black !important;">
+            <div class="row">
+                <div class="col-md-5 align-items-center wow animate__animated animate__bounceInLeft">
+                    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner collection-img gallery">
+                            <div class="carousel-item active" data-bs-interval="10000">
+                                <img src="images/c_formal_gray_shirt.png" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item" data-bs-interval="2000">
+                                <img src="images/c_formal_gray_shirt.png" class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-7 wow animate__animated animate__bounceInRight px-sm-5">
+                    <p class="SaleArrival text-center mt-3">Sale</p>
+                    <h1 class="Des">Gray shirt for Woman </h1>
+                    <span class="text-star"><i class="fas fa-star"></i></span>
+                    <span class="text-star"><i class="fas fa-star"></i></span>
+                    <span class="text-star"><i class="fas fa-star"></i></span>
+                    <span class="text-star"><i class="fas fa-star"></i></span>
+                    <span class="text-star"><i class="fas fa-star"></i></span>
+                    <p class="fw-bold fs-5 pt-2">$ 45.00</p>
+                    <p class="fs-5 mg-ds mt-5"><b>Availability:</b> In Stock</p>
+                    <p class="fs-5 mg-ds"><b>Condition:</b> New</p>
+                    <p class="fs-5 mg-ds"><b>Brand:</b> QC Company</p>
+                    <p class="fs-5 mg-ds"><b>Description: </b> </p>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. In tempore voluptates ea esse veritatis, vero earum voluptatibus sit dicta maiores nam saepe repellendus accusamus vel nemo! Suscipit nobis doloremque deserunt?</p>
+                    <a href="" class="btn btnNew">Add to cart</a>
+                </div>
+            </div>
+        </div>
+        <div id="fullpage" onclick="this.style.display='none';"></div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="title text-center mt-5">
+                <h2 class="position-relative d-inline-block wow animate__animated animate__bounce">
+                    Another Products
+                </h2>
+            </div>
+            <div class="collection-list mt-4 row gx-0 gy-3collection-list mt-4 row gx-0 gy-3 mb-5">
+
+                <div class="col-md-6 col-lg-4 col-xl-3 p-2 feat wow animate__animated animate__bounceInUp">
+                    <div class="collection-img position-relative">
+                        <img src="images/c_t-shirt_men.png" alt="" class="w-100">
+                        <span class="position-absolute bg-danger text-white d-flex align-items-center justify-content-center">sale</span>
+                    </div>
+                    <div class="text-center">
+                        <div class="rating mt-3">
+                            <span class="text-star"><i class="fas fa-star"></i></span>
+                            <span class="text-star"><i class="fas fa-star"></i></span>
+                            <span class="text-star"><i class="fas fa-star"></i></span>
+                            <span class="text-star"><i class="fas fa-star"></i></span>
+                            <span class="text-star"><i class="fas fa-star"></i></span>
+                        </div>
+                        <p class="text-capitalize my-1">leather jacket</p>
+                        <span class="fw-bold">$ 30.00</span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-3 p-2 new wow animate__animated animate__backInRight">
+                    <div class="collection-img position-relative">
+                        <img src="images/c_tunic-shirt_girl.png" alt="" class="w-100">
+                        <span class="position-absolute bg-danger text-white d-flex align-items-center justify-content-center">sale</span>
+                    </div>
+                    <div class="text-center">
+                        <div class="rating mt-3">
+                            <span class="text-star"><i class="fas fa-star"></i></span>
+                            <span class="text-star"><i class="fas fa-star"></i></span>
+                            <span class="text-star"><i class="fas fa-star"></i></span>
+                            <span class="text-star"><i class="fas fa-star"></i></span>
+                            <span class="text-star"><i class="fas fa-star"></i></span>
+                        </div>
+                        <p class="text-capitalize my-1">men shirt</p>
+                        <span class="fw-bold">$ 25.50</span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-3 p-2 best wow animate__animated animate__backInLeft">
+                    <div class="collection-img position-relative">
+                        <img src="images/c_undershirt.png" alt="" class="w-100">
+                        <span class="position-absolute bg-danger text-white d-flex align-items-center justify-content-center">sale</span>
+                    </div>
+                    <div class="text-center">
+                        <div class="rating mt-3">
+                            <span class="text-star"><i class="fas fa-star"></i></span>
+                            <span class="text-star"><i class="fas fa-star"></i></span>
+                            <span class="text-star"><i class="fas fa-star"></i></span>
+                            <span class="text-star"><i class="fas fa-star"></i></span>
+                            <span class="text-star"><i class="fas fa-star"></i></span>
+                        </div>
+                        <p class="text-capitalize my-1">gray shirt</p>
+                        <span class="fw-bold">$ 70.50</span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-3 p-2 feat wow animate__animated animate__bounceInDown">
+                    <div class="collection-img position-relative">
+                        <img src="images/c_western-shirt.png" alt="" class="w-100">
+                        <span class="position-absolute bg-danger text-white d-flex align-items-center justify-content-center">sale</span>
+                    </div>
+                    <div class="text-center">
+                        <div class="rating mt-3">
+                            <span class="text-star"><i class="fas fa-star"></i></span>
+                            <span class="text-star"><i class="fas fa-star"></i></span>
+                            <span class="text-star"><i class="fas fa-star"></i></span>
+                            <span class="text-star"><i class="fas fa-star"></i></span>
+                            <span class="text-star"><i class="fas fa-star"></i></span>
+                        </div>
+                        <p class="text-capitalize my-1">sweater shirt</p>
+                        <span class="fw-bold ">$ 55.50</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <footer class="bg-dark py-5">
+        <div class="container">
+            <div class="row text-white g-4">
+                <div class="col-md-6 col-lg-3">
+                    <a href="index.html" class="text-uppercase text-decoration-none brand text-white">
+                        Attire
+                    </a>
+                    <p class=" mt-3 cl-gray">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum mollitia quisquam veniam odit cupiditate, ullam aut voluptas velit dolor ipsam?</p>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <h5 class="fw-light">Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="my-3">
+                            <a href="#header" class="cl-gray text-decoration-none">
+                                <i class="fas fa-chevron-right me-1"></i>Home
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="#collection" class="cl-gray text-decoration-none">
+                                <i class="fas fa-chevron-right me-1"></i>Collection
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="#blogs" class="cl-gray text-decoration-none">
+                                <i class="fas fa-chevron-right me-1"></i>Blogs
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="#about" class="cl-gray text-decoration-none">
+                                <i class="fas fa-chevron-right me-1"></i>About Us
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <h5 class="fw-light mb-3">Contact Us</h5>
+                    <div class="d-flex justify-content-start align-items-start my-2 text-muted">
+                        <span class="me-3">
+                            <i class = "fas fa-map-marked-alt cl-gray"></i>
+                        </span>
+                        <span class="fw-light cl-gray">
+                            Albert Street, New York, AS 756, United States of America
+                        </span>
+                    </div>
+                    <div class="d-flex justify-content-start align-items-start my-2 text-muted">
+                        <span class="me-3">
+                            <i class = "fas fa-envelope cl-gray"></i>
+                        </span>
+                        <span class="fw-light cl-gray">
+                            attire.support@gmail.com
+                        </span>
+                    </div>
+                    <div class="d-flex justify-content-start align-items-start my-2 text-muted">
+                        <span class="me-3">
+                            <i class = "fas fa-phone-alt cl-gray"></i>
+                        </span>
+                        <span class="fw-light cl-gray">
+                            +9786 6776 236
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <h5 class="fw-light mb-3">Follow Us</h5>
+                    <div>
+                        <ul class="list-unstyled d-flex">
+                            <li>
+                                <a href="https://www.facebook.com/profile.php?id=100080987000683" class="text-white text-decoration-none text-muted fs-4 me-4">
+                                    <i class="fab fa-facebook-f cl-gray"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-white text-decoration-none text-muted fs-4 me-4">
+                                    <i class="fab fa-twitter cl-gray"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-white text-decoration-none text-muted fs-4 me-4">
+                                    <i class="fab fa-instagram cl-gray"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-white text-decoration-none text-muted fs-4 me-4">
+                                    <i class="fab fa-pinterest cl-gray"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="jquery/jquery-3.6.3.min.js"></script>
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="js/isotope.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js" integrity="sha512-eP8DK17a+MOcKHXC5Yrqzd8WI5WKh6F1TIk5QZ/8Lbv+8ssblcz7oGC8ZmQ/ZSAPa7ZmsCU4e/hcovqR8jfJqA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="js/WOW.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/script.js"></script>
+
+
+</html>
